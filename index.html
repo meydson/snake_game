@@ -7,6 +7,9 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
         <script defer src="js/script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.bundle.min.js">
+        <script src="bootstrap/js/bootstrap.min.js"></script>
         <title>Snake Game</title>
     </head> 
     <body>
@@ -25,13 +28,17 @@
         </header>
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col col-1">
-                    
+                <div class="col col-3">
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Dificuldade</label>
+                        <select id="dificuldade"class="form-control" id="exampleFormControlSelect1">
+                            <option value="facil">Fácil</option>
+                            <option value="normal" selected>Normal</option>
+                            <option value="dificil">Difícil</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="col col-2">
-                    <p>teste</p>
-                </div>
-                <div class="col col-9 justify-content-center">
+                <div class="col col-9">
                     <canvas id="snake" width="512" height="512"></canvas>
                 </div>
             </div>
