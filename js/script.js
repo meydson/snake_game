@@ -80,24 +80,25 @@ function iniciarJogo() {
 
 let jogo = setInterval(iniciarJogo, 100);
 
-function jogo_facil() {
-    jogo = setInterval(iniciarJogo, 200);
-    console.log(dificuldade);
-}
-
-function jogo_normal() {
-    jogo = setInterval(iniciarJogo, 100);
-}
-
-function jogo_dificil() {
-    jogo = setInterval(iniciarJogo, 50);
-    console.log(dificuldade);
-}  
-
 var activities = document.getElementById("dificuldade");
 activities.addEventListener("change", function() {
     let dificuldade = activities.options[activities.selectedIndex].value;
-    console.log(dificuldade);   
+    if (dificuldade == "facil") {
+        clearInterval(jogo);
+        jogo = setInterval(iniciarJogo, 200);
+        console.log(dificuldade);
+        console.log(jogo);
+    }else if (dificuldade == "normal") {
+        clearInterval(jogo);
+        jogo = setInterval(iniciarJogo, 100);
+        console.log(dificuldade);
+        console.log(jogo);
+    }else{
+        clearInterval(jogo);
+        jogo = setInterval(iniciarJogo, 50);
+        console.log(dificuldade);
+        console.log(jogo);
+    }
 })
 
 
