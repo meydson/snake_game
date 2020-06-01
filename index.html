@@ -18,7 +18,10 @@
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="javascript:history.go()">Snake Game</a>
+                  <a class="nav-link" href="#">Snake Game</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:history.go()">Novo Jogo</a>
                 </li>
               </ul>
             </div>
@@ -28,18 +31,27 @@
         </header>
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col col-3">
+                <div class="col col-3 justify-content-center">
                     <div class="form-group">
-                        <label for="exampleFormControlSelect1">Dificuldade</label>
+                        <label for="exampleFormControlSelect1"><b>Dificuldade</b></label>
                         <select id="dificuldade"class="form-control" id="exampleFormControlSelect1">
                             <option value="facil">Fácil</option>
                             <option value="normal" selected>Normal</option>
                             <option value="dificil">Difícil</option>
                         </select>
+                        <p>Após selecionar a dificuldade clique em cima da área do jogo!</p>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Pontuação</span>
+                        </div>
+                        <input id="score" type="text" class="form-control" aria-label="Exemplo do tamanho do input" aria-describedby="inputGroup-sizing-default">
                     </div>
                 </div>
-                <div class="col col-9">
+                <div class="col col-6 row justify-content-center">
                     <canvas id="snake" width="512" height="512"></canvas>
+                </div>
+                <div class="col col-3 row justify-content-center">
                 </div>
             </div>
         </div>
